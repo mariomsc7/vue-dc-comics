@@ -4,7 +4,7 @@
       <ul>
           <li v-for="(info, index) in images" :key="index">
               <span>
-                <img :src="info.img" alt="">
+                <img src="" alt="">
               </span>
               <a href="">{{info.text}}</a>
           </li>
