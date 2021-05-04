@@ -67,7 +67,7 @@ export default {
     }
 
     .nav-list li a {
-        padding: 32px 16px;
+        padding: 37px 16px;
         text-decoration: none;
         text-transform: uppercase;
         font-size: 1rem;
