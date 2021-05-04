@@ -2,18 +2,13 @@
   <div class="container">
       
       <ul>
-          <li>
+          <li v-for="(info, index) in images" :key="index">
               <span>
-                <img src="../assets/buy-comics-digital-comics.png" alt="">
+                <img :src="info.img" alt="">
               </span>
-              <a href="">digital comics</a>
+              <a href="">{{info.text}}</a>
           </li>
-          <li>
-              <span>
-                <img src="../assets/buy-comics-digital-comics.png" alt="">
-              </span>
-              <a href="">digital comics</a>
-          </li>
+
           
       </ul>
   </div>
@@ -30,16 +25,16 @@ export default {
                  text: 'digital comics'
                },
                { img: '../assets/buy-comics-merchandise.png',
-                 text: 'digital comics'
+                 text: 'dc merchandise'
                },
                 { img: '../assets/buy-comics-shop-locator.png',
-                 text: 'digital comics'
+                 text: 'subscription'
                },
                 { img: '../assets/buy-comics-subscriptions.png',
-                 text: 'digital comics'
+                 text: 'comic shop locator'
                },
                 { img: '../assets/buy-dc-power-visa.svg',
-                 text: 'digital comics'
+                 text: 'dc power visa'
                },
     
             ],
