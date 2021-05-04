@@ -1,10 +1,12 @@
 <template>
-  <div class="container">
+
+<div class="background">
+      <div class="container">
       
       <ul>
           <li v-for="(info, index) in images" :key="index">
               <span>
-                <img src="" alt="">
+                <img :src="info.img" alt="">
               </span>
               <a href="">{{info.text}}</a>
           </li>
@@ -12,6 +14,8 @@
           
       </ul>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -44,11 +48,16 @@ export default {
 </script>
 
 <style scoped>
+
+    .background {
+        background: #0282f9;
+    }
+
     .container {
         max-width: 1270px;
         margin: 0 auto;
         padding: 3rem;
-        background-color: #888;
+        
     }
 
     ul {
