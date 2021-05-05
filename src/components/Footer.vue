@@ -4,21 +4,21 @@
         <div class="top-footer">
           
             <div class="left-box">
-                <div class="col-1">
-                    <h2>DC COMICS</h2>
+                <div v-for="(link, index) in links" :key="index">
+                    <h2>{{link.title}}</h2>
                     <ul>
-                        <li v-for="(link, index) in links" :key="index">
-                            <a href="">{{ link.text }}</a>
+                        <li v-for="(subtitle, index) in link.text" :key="index">
+                            <a href="">{{ subtitle }}</a>
                         </li>
                     </ul>
-                    <h2>DC COMICS</h2>
+                    <!-- <h2>DC COMICS</h2>
                         <ul>
                             <li>
                                 <a href="">2</a>
                             </li>
-                        </ul>
+                        </ul> -->
                 </div>
-                <div class="col-2">
+                <!-- <div class="col-2">
                     <h2>DC COMICS</h2>
                     <ul>
                         <li>
@@ -33,7 +33,7 @@
                             <a href="">4</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
             </div>
 
@@ -50,7 +50,7 @@
                   <h2>follow us</h2>
                   <ul> 
                     <li v-for="(icon, index) in icons" :key="index">
-                        <a href=""><img :src="icon.icons" alt=""></a>
+                        <a href=""><img :src="icon.icon" alt=""></a>
                     </li>
                   </ul>
               </div>
@@ -105,8 +105,7 @@ export default {
         display: flex;
         width: 1270px;
         margin: 0 auto;
-        padding: 40px;
-        color: #fff;
+        padding: 65px;
         background-image: url('../assets/dc-logo-bg.png');
         background-repeat: no-repeat;
         background-position-x: right;
@@ -124,16 +123,25 @@ export default {
 
     .left-box {
         display: flex;
+        flex-direction: column;
+        max-height: 300px;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
-    ul {
+    .left-box h2 {
+        margin: 10px 0px;
+        color: #fff;
+    }
+
+    .left-box ul {
         list-style: none;
     }
 
-    ul li a {
-        color: #fff;
+    .left-box ul li a {
+        color: #808080;
         text-decoration: none;
+        font-size: 13px;
     }
 
     .bottom-footer {
