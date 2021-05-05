@@ -43,7 +43,12 @@
         </div>
       </div>
 
-      <div class="bottom-footer"></div>
+      <div class="bottom-footer">
+          <div class="bottom-box">
+              <button>sign-up now</button>
+              <h2>follow us</h2>
+          </div>
+      </div>
   </footer>
 </template>
 
@@ -79,15 +84,19 @@ export default {
     .background {
         background-image: url('../assets/footer-bg.jpg');
         background-size: cover;
+
     }    
 
     .top-footer {
         display: flex;
         width: 1270px;
         margin: 0 auto;
-        height: 400px;
         padding: 40px;
         color: #fff;
+        background-image: url('../assets/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: -100px;
     }
 
     .left-box {
@@ -95,7 +104,8 @@ export default {
     }
 
     .right-box {
-        flex-basis: 70%;
+        flex-basis: 60%;
+
     }
 
     .left-box {
@@ -107,5 +117,22 @@ export default {
         list-style: none;
     }
 
+    ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .bottom-footer {
+        background-color: #303030;
+        
+    }
+
+    .bottom-box {
+        width: 1270px;
+        margin: 0 auto;
+        display: flex;
+        
+        
+    }
 
 </style>
