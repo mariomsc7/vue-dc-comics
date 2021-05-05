@@ -45,8 +45,15 @@
 
       <div class="bottom-footer">
           <div class="bottom-box">
-              <button>sign-up now</button>
-              <h2>follow us</h2>
+              <button class="btn">sign-up now!</button>
+              <div class="social">
+                  <h2>follow us</h2>
+                  <ul> 
+                    <li v-for="(icon, index) in icons" :key="index">
+                        <a href=""><img :src="icon.icons" alt=""></a>
+                    </li>
+                  </ul>
+              </div>
           </div>
       </div>
   </footer>
@@ -73,7 +80,14 @@ export default {
                     title: 'SITES',
                     text: ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
                 }
-            ]
+            ],
+            icons : [
+                { icon : '../assets/footer-facebook.png' },
+                { icon : '../assets/footer-twitter.png' },
+                { icon : '../assets/footer-youtube.png' },
+                { icon : '../assets/footer-pinterest.png' },
+                { icon : '../assets/footer-periscope.png' },
+            ],
         }
     }
 }
@@ -124,15 +138,47 @@ export default {
 
     .bottom-footer {
         background-color: #303030;
-        
+        height: 150px;
     }
 
     .bottom-box {
         width: 1270px;
         margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .bottom-box .btn {
+        padding: 15px 20px;
+        background: none;
+        outline: none;
+        border: 2px solid #0282f9;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .bottom-box .social {
         display: flex;
         
-        
+    }
+
+    .bottom-box .social h2 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #0282f9;
+        margin-right: 20px;
+    }
+
+    .bottom-box .social ul li {
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
     }
 
 </style>
