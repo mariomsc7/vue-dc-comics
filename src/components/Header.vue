@@ -54,6 +54,7 @@ export default {
         max-width: 1270px;
         margin: 0 auto;
         height: 100px;
+        padding-bottom: 25px;
         
     }
 

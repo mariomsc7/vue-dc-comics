@@ -2,15 +2,23 @@
   <main>
       
     <div class="jumbotron"></div>
-    <div class="main-content">
-
-        <ComicsCards
-         v-for="(card, index) in cards"
-         :key="index"
-         :details="card"
-        />
-
+    <div class="background">
+        <div class="btn absolute">
+            <button>current series</button>
+        </div>
+        <div class="main-content">
+            <ComicsCards
+            v-for="(card, index) in cards"
+            :key="index"
+            :details="card"
+            />
+        </div>
+        <div class="btn">
+            <button>load more</button>
+        </div>
+        
     </div>
+
       
   </main>
 </template>
@@ -124,10 +132,44 @@ export default {
         background-size: cover;
     }
 
+    .background {
+        background: #1c1c1c;
+        position: relative;
+    }
+
     .main-content {
         max-width: 1270px;
         margin: 0 auto;
+        padding-top: 10px;
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+    .btn button {
+        padding: 10px 50px;
+        outline: none;
+        background: #0282f9;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-family: 'Antonio', sans-serif;
+        cursor: pointer;
+    }
+
+    .btn.absolute button {
+        position: absolute;
+        top: -25px;
+        left: 270px;
+        font-size: 1.5rem;
+    }
+
 </style>

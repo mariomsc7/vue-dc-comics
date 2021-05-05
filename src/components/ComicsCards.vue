@@ -1,7 +1,10 @@
 <template>
     <div class="box">
-        <img :src="details.thumb" :alt="details.type">
-        <h2> {{ details.series }} </h2>
+        <div class="images">
+            <img :src="details.thumb" :alt="details.type">
+            <h4> {{ details.series }} </h4>
+        </div>
+
     </div>
 </template>
 
@@ -17,9 +20,28 @@ export default {
 
 <style scoped>
 
+    .box {
+        margin: 30px 0;
+    }
 
-    .box img {
+    .images {
+        max-width: 200px;
+    }
+
+    .images img {
         width: 200px;
         height: 200px;
+        cursor: pointer;
     }
+
+    .images h4 {
+        margin-top: 20px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
+
+    
+
 </style>
