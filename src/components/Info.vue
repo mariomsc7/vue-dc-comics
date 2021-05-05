@@ -66,6 +66,11 @@ export default {
         justify-content: space-between;
     }
 
+    ul li {
+        display: flex;
+        align-items: center;
+    }
+
     ul li a {
         text-decoration: none;
         color: #fff;
@@ -74,7 +79,7 @@ export default {
     }
 
     ul li span img {
-        vertical-align: middle;
+        
         width: 48px;
     }
 </style>
